@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke of the Day App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Joke of the Day App</h1>
+        
+        <!-- Joke of the Day Display -->
+        <div id="joke-of-the-day">
+            <h2>Joke of the Day</h2>
+            <p id="random-joke">Loading...</p>
+        </div>
+
+        <!-- Joke List -->
+        <div id="joke-list">
+            <h2>All Jokes</h2>
+            <input type="text" id="search-bar" placeholder="Search jokes..." oninput="searchJokes()">
+            <ul id="jokes-container">
+                <!-- Jokes will be injected here -->
+            </ul>
+        </div>
+
+        <!-- Add a New Joke -->
+        <div id="new-joke-form">
+            <h2>Add a New Joke</h2>
+            <form id="add-joke-form" onsubmit="addJoke(event)">
+                <input type="text" id="joke-content" placeholder="Joke" required>
+                <input type="text" id="joke-author" placeholder="Author" required>
+                <button type="submit">Add Joke</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="jokes.js"></script>
+</body>
+</html>
